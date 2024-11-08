@@ -49,7 +49,7 @@ class PersonServiceTest {
         Person person1 = new Person(17);
         Person person2 = new Person(18);
         Person person3 = new Person(21);
-        List<Person> personList = new ArrayList<>(Arrays.asList(person1,person2,person3));
+        List<Person> personList = List.of(person1,person2,person3);
         Assertions.assertEquals(2, ps.filterRemovingNotAdult(personList).size());
     }
 }
